@@ -1,0 +1,404 @@
+body{
+    margin: 0px;
+    background-color: #2b2d42;
+    color: #edf2f4;
+}
+
+.main-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+    overflow: auto;
+}
+
+.navbar{
+    grid-column: span 4;
+    grid-row: span 2;
+    margin-top: 9px;
+    
+}
+
+.nav-comp {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    align-items: center; /* Centers images vertically */
+    background-color: #8d99ae; /* Light background */
+    padding: 10px; /* Space inside the container */
+    border-radius: 10px; /* Optional: rounded corners */
+    width: fit-content; /* Ensures the div only takes as much space as needed */
+    margin: 0 auto; /* Centers the div on the page */
+    gap: 6px;
+}
+
+.nav-comp a {
+    position: relative; /* Needed for tooltip positioning */
+    text-decoration: none;
+}
+
+.nav-comp a::before {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px; /* Adjust position below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    background-color: #ef233c; /* Tooltip background */
+    color: #edf2f4; /* Tooltip text color */
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    pointer-events: none; /* Prevents tooltip from interfering with clicks */
+}
+
+.nav-comp a:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-comp img {
+    width: 2vw;
+    height: auto;
+    margin: 0 5px;
+}
+
+
+.profile-card{
+    grid-row: span 100;
+    grid-column: span 1;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 5%;
+    background-color: #8d99ae;
+    border-radius: 45px;
+    padding-top: 10px;
+    margin-left: 90px;
+}
+
+.main-info{
+grid-column: span 3;
+grid-row: span 7;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.profile-photo{
+    width: 80%;
+
+}
+
+.profile-name{
+    font-family: 'Dosis';
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.profile-about {
+    font-family: 'Varela Round';
+    text-align: center;
+    margin-top: 80px;
+    
+
+}
+
+.profile-icons{
+    
+    display: flex;
+    justify-content: center;
+    /* width: max-content; */
+    gap:23px;
+    margin-top: 20px;
+    align-items: center;    
+}
+
+.profile-icons img{
+    width: 40px;
+}
+
+.profile-design{
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 0px;
+    z-index: -1;
+    opacity: 60%;
+}
+
+.title {
+    font-size: 5rem;
+    font-family: 'Dosis';
+    font-weight: 800;
+}
+
+
+.Projects, .work-experience {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.project-title, .work-title {
+    font-family: 'Varela Round';
+    font-weight: 600;
+}
+
+.project-description,.work-body {
+    width: 100%;
+    text-align: justify;
+    text-justify: auto;
+    font-family: 'Varela Round';
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.about-me{
+
+    font-family: 'Varela Round';
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: auto;
+    padding-right: 70px;
+}
+
+.work-experience{
+    margin-bottom: 100px;
+}
+
+.Skills {
+    font-family: 'Varela Round';
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 100px;
+
+}
+
+.certifications {
+    font-family: 'Varela Round';
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 30px;
+
+}
+.bg-profile {
+    position: absolute;
+    width: 100%;
+    opacity: 60%;
+    
+    z-index: -1;
+}
+
+.lazy-load {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.lazy-load.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-item,.work-card{
+
+
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* font-size: 18px; */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-item:hover,.work-card:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    
+}
+
+.bg-image {
+    position: fixed;
+    width: 60%;
+    left: 30%;
+    opacity: 0.3;
+    top: 50px;
+}
+
+.bg-image1 {
+    position: fixed;
+    width: 20%;
+    bottom: 0px;
+    opacity: 0.3;
+
+}
+
+.title-section{
+    font-family: 'Dosis'; 
+    font-weight: 800; 
+    font-size: 2rem; 
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1452px) {
+    
+
+    .profile-card{
+
+        margin-left: 60px;
+    }
+    .profile-name{
+        font-size: 1.3rem;
+        
+    }
+    .title {
+        font-size: 4.5rem;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+   
+    .profile-card{
+
+        margin-left: 50px;
+    }
+
+    .profile-name{
+        font-size: 1.1rem;
+        
+    }
+    .title {
+        font-size: 4rem;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1230px) {
+    
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+        height: 100vh;
+    }
+
+
+    .profile-photo{
+        width: 40%;
+        margin-bottom: 0px;
+    
+    }
+
+    .profile-card{
+        width: 70%;
+        position: static;
+    }
+    .profile-name{
+
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
+    .profile-design{
+        position: absolute;
+        top: 35%;
+        z-index: 0;
+        left: 15%;
+        width: 40%;
+        opacity: 0.3;
+    }
+    
+        .profile-about{
+            margin-top: 55px;
+        }
+        .profile-icons{
+            margin-bottom: 10px;
+        }
+}
+
+@media only screen and (max-width: 1000px) {
+   
+    
+    .main-info{
+        margin-top: 80px;
+    }
+    .about-me{
+        padding-right: 10px;
+   }
+   
+
+}
+
+@media only screen and (max-width: 800px) {
+   
+    body{
+        font-size: 0.8rem;
+    }
+    .main-info{
+        margin-top: 100px;
+    }
+    .title {
+        font-size: 3rem;
+    }
+
+    .title-section{
+        font-size: 1.7rem;
+    }
+    
+}
+
+
+@media only screen and (max-width: 650px) {
+    body{
+        font-size: 0.7rem;
+    }
+    .main-container{
+        height: 100vh;
+    }
+
+    .navbar{
+        margin-bottom: 0px;
+    }
+    .profile-card{
+        margin-top: 0px;
+        position: static;
+    }
+
+    .main-info{
+        margin-top: 50px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+
+    .title-section{
+        font-size: 1rem;
+    }
+
+    .bg-image1 {
+        position: fixed;
+        width: 40%;
+        bottom: 0px;
+        opacity: 0.3;
+    
+    }
+    
+    
+}
