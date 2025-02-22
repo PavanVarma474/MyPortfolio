@@ -222,7 +222,7 @@ grid-row: span 7;
     /* font-size: 18px; */
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .project-item:hover,.work-card:hover {
@@ -310,6 +310,7 @@ grid-row: span 7;
     .profile-card{
         width: 70%;
         position: static;
+        margin-left:0px;
     }
     .profile-name{
 
