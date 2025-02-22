@@ -237,6 +237,7 @@ grid-row: span 7;
     left: 30%;
     opacity: 0.3;
     top: 50px;
+    z-index: -1;
 }
 
 .bg-image1 {
@@ -244,6 +245,7 @@ grid-row: span 7;
     width: 20%;
     bottom: 0px;
     opacity: 0.3;
+    z-index:-1;
 
 }
 
