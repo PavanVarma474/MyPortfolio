@@ -4,6 +4,9 @@ body{
     color: #edf2f4;
 }
 
+.profile-photo1{
+    display: none;
+}
 .main-container{
     display: grid;
     width: 100%;
@@ -79,7 +82,7 @@ body{
     background-color: #8d99ae;
     border-radius: 45px;
     padding-top: 10px;
-    margin-left: 90px;
+    margin-left: 20px;
 }
 
 .main-info{
@@ -245,7 +248,7 @@ grid-row: span 7;
     width: 20%;
     bottom: 0px;
     opacity: 0.3;
-    z-index:-1;
+    z-index: -1;
 
 }
 
@@ -302,17 +305,20 @@ grid-row: span 7;
         height: 100vh;
     }
 
+    .profile-photo1{
+        display: inline;
+        width: 60%;
+    }
 
     .profile-photo{
-        width: 40%;
-        margin-bottom: 0px;
+        display: none;
     
     }
 
     .profile-card{
         width: 70%;
         position: static;
-        margin-left:0px;
+        margin-left: 0px;
     }
     .profile-name{
 
@@ -334,12 +340,13 @@ grid-row: span 7;
         .profile-icons{
             margin-bottom: 10px;
         }
-.profile-icons img{
+
+        .profile-icons img{
             width: 30px;
         }
-    .nav-comp img {
-    width: 25px;
-}
+
+        .nav-comp img {
+        width: 26px;}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -351,10 +358,12 @@ grid-row: span 7;
     .about-me{
         padding-right: 10px;
    }
+   .profile-icons img{
+    width: 25px;
+}
 
-    .profile-icons img{
-            width: 25px;
-        }
+.nav-comp img {
+    width: 23px;}
 
 }
 
@@ -364,7 +373,7 @@ grid-row: span 7;
         font-size: 0.8rem;
     }
     .main-info{
-        margin-top: 0px;
+        margin-top: 20px;
     }
     .title {
         font-size: 3rem;
@@ -373,13 +382,14 @@ grid-row: span 7;
     .title-section{
         font-size: 1.7rem;
     }
-
     .profile-icons img{
-            width: 20px;
-        }
+        width: 20px;
+    }
+
     .nav-comp img {
-    width: 20px;
-}
+        width: 15px;}
+    
+
 }
 
 
