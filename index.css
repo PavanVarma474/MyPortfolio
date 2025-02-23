@@ -22,6 +22,8 @@ body{
     
 }
 
+
+
 .nav-comp {
     display: flex;
     justify-content: center; /* Centers images horizontally */
@@ -94,10 +96,18 @@ grid-row: span 7;
     margin-left: 5%;
 }
 
-.profile-photo{
+.profile-photo {
     width: 80%;
-
+    border-radius: 50%; /* Ensure the image is circular */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
 }
+
+/* Glowing effect when the profile photo is clicked (active state) */
+.profile-photo:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7); /* Glowing cyan effect */
+    transform: scale(1.05); /* Optional: Slightly enlarge the photo when clicked */
+}
+
 
 .profile-name{
     font-family: 'Dosis';
@@ -142,6 +152,7 @@ grid-row: span 7;
     font-size: 5rem;
     font-family: 'Dosis';
     font-weight: 800;
+    color: #ef233c; 
 }
 
 
@@ -152,6 +163,7 @@ grid-row: span 7;
 .project-title, .work-title {
     font-family: 'Varela Round';
     font-weight: 600;
+    
 }
 
 .project-description,.work-body {
@@ -177,15 +189,7 @@ grid-row: span 7;
     margin-bottom: 100px;
 }
 
-.Skills {
-    font-family: 'Varela Round';
-    font-weight: 200;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    margin-bottom: 100px;
 
-}
 
 .certifications {
     font-family: 'Varela Round';
@@ -257,7 +261,62 @@ grid-row: span 7;
     font-weight: 800; 
     font-size: 2rem; 
     margin-bottom: 20px;
+    color: #ef233c; 
 }
+
+.profile-photo2{
+    transition: box-shadow 0.2s ease;
+}
+
+.profile-photo2:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7); /* Glowing cyan effect */
+    transform: scale(1.05); /* Optional: Slightly enlarge the photo when clicked */
+}
+
+
+
+
+.Skills {
+    /* margin: 50px 10%;   */
+    border-radius: 10px;
+    color: #edf2f4;
+}
+
+.internal-skill {
+    margin-bottom: 5%; /* Space between each skill category */
+}
+
+.skill-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px; 
+    font-family: 'Dosis';
+}
+
+/* Grid layout for icons */
+.internal-skill-grid, .internal-skill-grid2 {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    justify-content: start; /* Align icons in the center */
+    
+}
+
+.skills-icon, .skills-icon1, .skills-icon2, .skills-icon3 {
+    width: 65px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-icon:hover, .skills-icon1:hover, .skills-icon2:hover, .skills-icon3:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.7); /* Glowing effect on hover */
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1452px) {
     
@@ -300,14 +359,34 @@ grid-row: span 7;
     .main-container{
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 25px;
         align-items: center;
         height: 100vh;
+        margin: 0px;
     }
 
     .profile-photo1{
         display: inline;
         width: 60%;
+    }
+    .main-info{
+        margin:0px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+    }
+    .about-me{
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .navbar{
+        margin-bottom: 0px;
     }
 
     .profile-photo{
@@ -347,6 +426,21 @@ grid-row: span 7;
 
         .nav-comp img {
         width: 26px;}
+
+        .skills-icon, .skills-icon1, .skills-icon2, .skills-icon3 {
+            width: 45px;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skills-icon:hover, .skills-icon1:hover, .skills-icon2:hover, .skills-icon3:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.7); /* Glowing effect on hover */
+        }
+        
+
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -360,6 +454,8 @@ grid-row: span 7;
    }
    .profile-icons img{
     width: 25px;
+
+    
 }
 
 .nav-comp img {
@@ -388,6 +484,19 @@ grid-row: span 7;
 
     .nav-comp img {
         width: 15px;}
+
+        .skills-icon, .skills-icon1, .skills-icon2, .skills-icon3 {
+            width: 30px;
+            height: auto;
+            border-radius: 7px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skills-icon:hover, .skills-icon1:hover, .skills-icon2:hover, .skills-icon3:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 0 8px 2px rgba(0, 255, 255, 0.7); /* Glowing effect on hover */
+        }
+        
     
 
 }
@@ -430,3 +539,38 @@ grid-row: span 7;
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
