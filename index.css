@@ -290,7 +290,7 @@ grid-row: span 7;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 15px; 
-    font-family: 'Dosis';
+    font-family: 'Varela Round';
 }
 
 /* Grid layout for icons */
@@ -497,7 +497,6 @@ grid-row: span 7;
             box-shadow: 0 0 8px 2px rgba(0, 255, 255, 0.7); /* Glowing effect on hover */
         }
         
-    
 
 }
 
@@ -536,7 +535,19 @@ grid-row: span 7;
         opacity: 0.3;
     
     }
-    
+
+    .skills-icon, .skills-icon1, .skills-icon2, .skills-icon3 {
+            width: 20px;
+            height: auto;
+            border-radius: 7px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skills-icon:hover, .skills-icon1:hover, .skills-icon2:hover, .skills-icon3:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 0 8px 2px rgba(0, 255, 255, 0.7); /* Glowing effect on hover */
+        }
+        
     
 }
 
