@@ -24,6 +24,8 @@ body{
 
 
 
+
+
 .nav-comp {
     display: flex;
     justify-content: center; /* Centers images horizontally */
@@ -42,7 +44,7 @@ body{
 }
 
 .nav-comp a::before {
-    content: attr(title);
+    content: attr(data-tooltip);
     position: absolute;
     bottom: -35px; /* Adjust position below the image */
     left: 50%;
@@ -72,10 +74,11 @@ body{
 }
 
 
+
 .profile-card{
     grid-row: span 100;
     grid-column: span 1;
-    
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +137,8 @@ grid-row: span 7;
     /* width: max-content; */
     gap:23px;
     margin-top: 20px;
-    align-items: center;    
+    align-items: center;  
+    margin-bottom:%6;
 }
 
 .profile-icons img{
